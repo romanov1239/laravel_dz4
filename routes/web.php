@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('home', [
+        'name' => 'Alex',
+        'age' => 30,
+        'position' => 'Developer',
+        'address' => 'Bragino Street, 54/32'
+    ]);
+});
+Route::get('/contacts', function () {
+    return view('contacts', [
+        'address' => 'Bragino Street, 54/32',
+        'post_code' => '12345',
+        'email' => 'alex@ya.ru',
+        'phone' => '+1234567890'
+    ]);
+});
